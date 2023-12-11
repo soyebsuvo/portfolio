@@ -1,0 +1,11 @@
+.tabs-lifted > .tab:is(input:checked){
+    background: none !important;
+    border : none !important;
+    padding-bottom: 0 !important;
+    color: #4155d5 !important;
+    font-weight: bold;
+}
+.tabs-lifted > .tab:is(input:checked):before{
+    content: none;
+    border: none;
+}
