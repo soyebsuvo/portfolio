@@ -91,7 +91,7 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/2">
+                        <div className="md:w-1/2 px-4 md:px-0">
                             <h1 className="text-4xl font-bold">I&apos;m Soyeb Suvo</h1>
                             <p className="py-6 font-font-inter text-sm">I am a highly skilled web developer specializing in the MERN stack, with a year of professional experience. My proficiency extends across MongoDB, Express.js, React, and Node.js, showcasing a comprehensive understanding of full-stack web development. I am deeply committed to maintaining excellence in my work and is dedicated to continuous learning, ensuring that i stay abreast of the latest developments in the dynamic field of web development. My passion for creating robust and innovative solutions, combined with my proactive approach to staying updated on emerging technologies, sets me apart as a dedicated and forward-thinking MERN stack developer.</p>
                             <div className="flex justify-start items-center gap-4">

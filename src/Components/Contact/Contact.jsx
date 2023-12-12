@@ -56,7 +56,7 @@ export default function Contact() {
                             {error && <p className='mt-2 text-red-500'>{error}</p>}
                         </form>
                     </div>
-                    <div className="md:w-1/2">
+                    <div className="md:w-1/2 px-5 md:px-0">
                         <h1 className="text-4xl font-bold">Get in <span className="text-[#4155d5] py-3">touch</span></h1>
                         <p className="py-6 font-font-inter text-sm">
                             Get in touch for inquiries, collaborations, or any questions. I&apos;m available and ready to connect—reach out through the provided contact details below, and let&apos;s start a conversation.</p>

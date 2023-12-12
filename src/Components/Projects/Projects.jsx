@@ -11,7 +11,7 @@ export default function Projects() {
                 <h2 className="text-3xl font-bold">My <span className="text-[#4155d5] py-3">Projects</span></h2>
                 <hr className="border-4 border-dotted border-t-0 border-[#4155d5] mt-3 w-56 mx-auto" />
             </div>
-            <div className="grid grid-cols-3 gap-12 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-8 px-5 md:px-0">
                 <div className='relative main border border-[#4155d5]'>
                     <img src={project} alt="" />
                     <h2 className='absolute top-0 left-1 text-white text-xl font-bold z-10 text-center w-full over'>Homez. A Real Estat Platform</h2>

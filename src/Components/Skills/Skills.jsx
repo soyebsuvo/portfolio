@@ -16,8 +16,8 @@ export default function Skills() {
                 <h2 className="text-3xl font-bold">My <span className="text-[#4155d5] py-3">Skills</span></h2>
                 <hr className="border-4 border-dotted border-t-0 border-[#4155d5] mt-3 w-56 mx-auto" />
             </div>
-      <div className="flex justify-center items-start gap-6 py-12">
-        <div className="md:w-1/2 grid grid-cols-4 justify-center items-center gap-5">
+      <div className="flex flex-col md:flex-row justify-center items-start gap-6 py-12">
+        <div className="md:w-1/2 grid grid-cols-4 justify-center items-center gap-5 px-4">
             <img className="w-20" src={html} alt="" />
             <img className="w-20" src={css} alt="" />
             <img className="w-20" src={tailwind} alt="" />
@@ -29,7 +29,7 @@ export default function Skills() {
             <img className="w-20" src={vscode} alt="" />
             <img className="w-20" src={express} alt="" />
         </div>
-        <div className="md:w-1/2 md:px-20 py-6">
+        <div className="w-full md:w-1/2 px-5 md:px-20 py-6">
             <div className="w-full flex justify-center items-center">
                 <p className="font-bold mr-3 mb-1 w-20">HTML:</p> <progress className="progress progress-primary w-full" value="90" max="100"></progress>
             </div>

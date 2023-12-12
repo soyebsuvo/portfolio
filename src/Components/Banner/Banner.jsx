@@ -2,9 +2,9 @@ import profile from "../../assets/pro.png"
 export default function Banner() {
     return (
         <div>
-            <div className="hero h-[491px]" style={{ backgroundImage: 'url(https://images.pexels.com/photos/6633920/pexels-photo-6633920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}>
+            <div className="hero md:h-[491px]" style={{ backgroundImage: 'url(https://images.pexels.com/photos/6633920/pexels-photo-6633920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content py-0 text-neutral-content">
+                <div className="hero-content py-3 md:py-0 text-neutral-content">
                     <div className="hero md:px-16">
                         <div className="flex items-center gap-5 flex-col lg:flex-row-reverse">
                             <div className="md:w-1/2 flex justify-center h-[491px]"

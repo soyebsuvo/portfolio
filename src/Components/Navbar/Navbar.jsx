@@ -38,8 +38,7 @@ export default function Navbar() {
                     </a>                    
                 </div>
             </div>
-            </nav>
-            
+            </nav>            
         </div>
     )
 }
