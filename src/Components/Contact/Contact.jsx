@@ -1,9 +1,42 @@
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-
+import emailjs from 'emailjs-com';
+import { useState } from 'react';
 export default function Contact() {
+    const [ text , setText ] = useState("")
+    const [ error , setError ] = useState("")
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const message = e.target.message.value;
+        const body = { name , email , message };
+        console.log(body)
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            e.target,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          )
+            .then((result) => {
+              console.log(result.text);
+              if(result.text === 'OK'){
+                setText("Message sent Successfully")
+                e.target.reset();
+              }
+            }, (error) => {
+              console.error(error.text);
+              if(error){
+                setError("Can't Send Message")
+              }
+            });
+    }
+    setTimeout(() => {
+        setText("");
+    }, 4000);
     return (
         <div id='contact' className="md:px-16">
-            <div className="text-center">
+            <div className="text-center py-5">
                 <h2 className="text-3xl font-bold">Contact <span className="text-[#4155d5] py-3">Me</span></h2>
                 <hr className="border-4 border-dotted border-t-0 border-[#4155d5] mt-3 w-56 mx-auto" />
             </div>
@@ -14,11 +47,13 @@ export default function Contact() {
                             </div> */}
                     <div className='md:w-1/2'>
                         <h2 className='text-2xl font-bold mb-4'>Send a Message...</h2>
-                        <form>
-                            <input className="w-full px-2 py-3 bg-white outline-none my-2" type="text" name="name" id="name" placeholder="Name" /> <br />
-                            <input className="w-full px-2 py-3 bg-white outline-none my-2" type="email" name="email" id="email" placeholder="Email" /> <br />
-                            <textarea className="w-full px-2 py-3 bg-white outline-none my-2" name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                        <form onSubmit={handleSubmit}>
+                            <input className="w-full px-2 py-3 bg-white outline-none my-2" type="text" name="name" id="name" placeholder="Name" required/> <br />
+                            <input className="w-full px-2 py-3 bg-white outline-none my-2" type="email" name="email" id="email" placeholder="Email" required/> <br />
+                            <textarea className="w-full px-2 py-3 bg-white outline-none my-2" name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
                             <button type="submit" className="px-6 py-2 bg-gradient-to-r from-[#4155d5] to-[#6868C9] text-white">Send Message</button>
+                            {text && <p className='mt-2 text-green-500'>{text}</p>}
+                            {error && <p className='mt-2 text-red-500'>{error}</p>}
                         </form>
                     </div>
                     <div className="md:w-1/2">

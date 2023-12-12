@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import "./navbar.css"
+import link from '../../assets/answers.pdf'
 export default function Navbar() {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact Me</a></li>
     </>
     return (
@@ -31,7 +33,9 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="px-6 py-2 bg-gradient-to-r from-[#4155d5] to-[#6868C9] text-white">Resume</button>
+                    <a href={link} download>
+                        <button className="px-6 py-2 bg-gradient-to-r from-[#4155d5] to-[#6868C9] text-white">Resume</button>
+                    </a>                    
                 </div>
             </div>
             </nav>

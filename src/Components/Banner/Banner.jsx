@@ -1,4 +1,4 @@
-import profile from "../../assets/Profile.png"
+import profile from "../../assets/pro.png"
 export default function Banner() {
     return (
         <div>
@@ -7,10 +7,20 @@ export default function Banner() {
                 <div className="hero-content py-0 text-neutral-content">
                     <div className="hero md:px-16">
                         <div className="flex items-center gap-5 flex-col lg:flex-row-reverse">
-                            <div className="md:w-1/2 flex justify-center h-[491px]">
+                            <div className="md:w-1/2 flex justify-center h-[491px]"
+                            data-aos="fade-up"
+                            data-aos-easing="linear"
+                            data-aos-duration="900"
+                            data-aos-anchor-placement="top-bottom"
+                            >
                                 <img src={profile} className="h-full" />
                             </div>
-                            <div className="md:w-1/2">
+                            <div className="md:w-1/2"
+                            data-aos="fade-up"
+                            data-aos-easing="linear"
+                            data-aos-duration="900"
+                            data-aos-anchor-placement="top-bottom"
+                            >
                                 <h1 className="text-5xl font-bold">Hi, I am Soyeb Suvo</h1>
                                 <h2 className="text-3xl mt-5">Web Developer | MERN </h2>
                                 <p className="py-6 text-xs font-font-inter">MERN Stack Developer with a year of expertise in React, Node.js, MongoDB. Committed to excellence and ongoing learning.</p>
