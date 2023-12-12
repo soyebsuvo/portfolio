@@ -8,8 +8,8 @@ export default function Home() {
     <div>
       <Banner></Banner>
       <About></About>
-      <Contact></Contact>
       <Projects></Projects>
+      <Contact></Contact>
     </div>
   )
 }

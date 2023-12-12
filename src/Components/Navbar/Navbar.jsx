@@ -5,7 +5,7 @@ export default function Navbar() {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><a href="#about">About Me</a></li>
-        <li><NavLink to="/projects">Projects</NavLink></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact Me</a></li>
     </>
     return (

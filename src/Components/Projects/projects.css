@@ -1,0 +1,10 @@
+.over{
+    display: none;
+    transition: .3s all;
+}
+.main{
+    transition: .4s all;
+}
+.main:hover .over{
+    display: flex;
+}
